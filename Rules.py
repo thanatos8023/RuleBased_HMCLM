@@ -6,6 +6,7 @@ import json
 import os
 import glob
 import pickle
+import random
 
 
 class Model(object):
@@ -282,7 +283,7 @@ def make_response(model):
     return response_template
 
 
-if __name__ == '__main__':
+def evaluation():
     req = {
         'utt': '',
         'code': 7000,
@@ -320,3 +321,51 @@ if __name__ == '__main__':
             req['options'] = res['options']
 
         print(res_dict_form['message']['text'])
+
+
+def get_score():
+    filelist = glob.glob('corpus/Control*.txt')
+    raw = []
+    for filename in filelist:
+        with open(filename, 'r', encoding='utf-8') as f:
+            raw += f.read().split('\n')
+
+    random.shuffle(raw)
+    test = raw[:1000]
+
+    n = 0
+
+    correction = []
+    incorrect = []
+
+    for sent in test:
+        req = {
+            'utt': sent,
+            'code': 7000,
+            'user_key': 'asdfqew52',
+            'intention': '',
+            'options': 0
+        }
+
+        m = Model(json.dumps(req))
+
+        if m.intention:
+            correction.append((sent, m.intention))
+        else:
+            incorrect.append((sent, m.intention))
+
+    for i in range(100):
+        print("{} ---> {}".format(correction[i][0], correction[i][1]))
+
+    print("Correction: ", len(correction) / len(test))
+
+    if not incorrect == []:
+        print('-'*30)
+        print('Incorrection')
+        for i in range(5):
+            print("{} ---> {}".format(incorrect[i][0], incorrect[i][1]))
+
+
+if __name__ == '__main__':
+    #evaluation()
+    get_score()

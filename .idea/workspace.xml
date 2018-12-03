@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abb75396-c67c-4620-b298-ac48e95591af" name="Default Changelist" comment="" />
+    <list default="true" id="abb75396-c67c-4620-b298-ac48e95591af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rule_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/rule_test.ipynb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,47 +19,48 @@
     <session id="-304191152">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.105" value="1" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="450" />
-          <entry key="py" value="22970" />
+          <entry key="py" value="24519" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="23420" />
+          <entry key="Python" value="24969" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="1" />
           <entry key="PLAIN_TEXT" value="16" />
-          <entry key="Python" value="9" />
+          <entry key="Python" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="1" />
-          <entry key="py" value="9" />
+          <entry key="py" value="10" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
@@ -64,37 +72,78 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="234" column="56" selection-start-line="234" selection-start-column="56" selection-end-line="234" selection-end-column="56" />
+            <state relative-caret-position="-3547">
+              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
               <folding>
                 <element signature="e#24#49#0" expanded="true" />
-                <marker date="1542268485765" expanded="true" signature="6254:6259" ph="..." />
-                <marker date="1542268485765" expanded="true" signature="6254:6426" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/make_rule.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1808">
-              <caret line="257" column="13" lean-forward="true" selection-start-line="257" selection-start-column="13" selection-end-line="257" selection-end-column="13" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-                <element signature="e#68#2082#0" />
-                <element signature="e#2103#6233#0" />
-                <element signature="e#18932#20688#0" />
+                <marker date="1542620307296" expanded="true" signature="6268:6273" ph="..." />
+                <marker date="1542620307296" expanded="true" signature="6268:6440" ph="..." />
+                <marker date="1542620307296" expanded="true" signature="10448:11456" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/make_rule.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="839">
+              <caret line="623" column="9" selection-start-line="623" selection-start-column="9" selection-end-line="623" selection-end-column="9" />
+              <folding>
+                <element signature="e#24#37#0" expanded="true" />
+                <element signature="e#68#2082#0" />
+                <element signature="e#2103#6233#0" />
+                <element signature="e#6296#6927#0" />
+                <element signature="e#6949#7472#0" />
+                <element signature="e#7526#7966#0" />
+                <element signature="e#7999#8110#0" />
+                <element signature="e#8163#8379#0" />
+                <element signature="e#8412#8545#0" />
+                <element signature="e#8599#8848#0" />
+                <element signature="e#8881#8992#0" />
+                <element signature="e#9043#9203#0" />
+                <element signature="e#9236#9347#0" />
+                <element signature="e#9399#9530#0" />
+                <element signature="e#9563#9675#0" />
+                <element signature="e#9731#9800#0" />
+                <element signature="e#9833#9903#0" />
+                <element signature="e#9958#10213#0" />
+                <element signature="e#10246#10358#0" />
+                <element signature="e#10405#10596#0" />
+                <element signature="e#10629#11038#0" />
+                <element signature="e#11082#11242#0" />
+                <element signature="e#11275#11538#0" />
+                <element signature="e#11591#11660#0" />
+                <element signature="e#11693#12050#0" />
+                <element signature="e#12100#12568#0" />
+                <element signature="e#12601#13179#0" />
+                <element signature="e#13232#13301#0" />
+                <element signature="e#13334#13432#0" />
+                <element signature="e#13479#13579#0" />
+                <element signature="e#13612#13980#0" />
+                <element signature="e#14031#14133#0" />
+                <element signature="e#14166#14270#0" />
+                <element signature="e#14319#14484#0" />
+                <element signature="e#14517#14575#0" />
+                <element signature="e#14612#15067#0" />
+                <element signature="e#15188#15615#0" />
+                <element signature="e#15671#16126#0" />
+                <element signature="e#16152#16649#0" />
+                <element signature="e#16676#17108#0" />
+                <element signature="e#18932#20688#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="192">
+              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <folding>
+                <element signature="e#24#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,24 +165,28 @@
       <find>options</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/corpus/SmallTalk_AgeRU.txt" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/mecabtest.ipynb" />
         <option value="$PROJECT_DIR$/make_responses.py" />
         <option value="$PROJECT_DIR$/make_rule.py" />
         <option value="$PROJECT_DIR$/Rules.py" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="358" />
-    <option name="y" value="18" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -168,7 +221,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Rules">
+  <component name="RunManager" selected="Python.app">
     <configuration name="Rules" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RuleBased_HMCLM" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,6 +235,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Rules.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="RuleBased_HMCLM" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -236,9 +310,11 @@
       <item itemvalue="Python.make_rule" />
       <item itemvalue="Python.Rules" />
       <item itemvalue="Python.make_responses" />
+      <item itemvalue="Python.app" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.Rules" />
         <item itemvalue="Python.make_rule" />
         <item itemvalue="Python.make_responses" />
@@ -271,12 +347,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16044776" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16684435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3329718" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33224756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28741866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -300,13 +376,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Rules.py</url>
-          <line>255</line>
+          <line>256</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Rules.py</url>
-          <line>204</line>
+          <line>205</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../hmcLM/app.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -389,34 +470,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/../hmcLM/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state>
+          <caret selection-end-line="23" selection-end-column="50" />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Rules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="234" column="56" selection-start-line="234" selection-start-column="56" selection-end-line="234" selection-end-column="56" />
+        <state relative-caret-position="-3547">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding>
             <element signature="e#24#49#0" expanded="true" />
-            <marker date="1542268485765" expanded="true" signature="6254:6259" ph="..." />
-            <marker date="1542268485765" expanded="true" signature="6254:6426" ph="..." />
+            <marker date="1542620307296" expanded="true" signature="6268:6273" ph="..." />
+            <marker date="1542620307296" expanded="true" signature="6268:6440" ph="..." />
+            <marker date="1542620307296" expanded="true" signature="10448:11456" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/make_rule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1808">
-          <caret line="257" column="13" lean-forward="true" selection-start-line="257" selection-start-column="13" selection-end-line="257" selection-end-column="13" />
+        <state relative-caret-position="839">
+          <caret line="623" column="9" selection-start-line="623" selection-start-column="9" selection-end-line="623" selection-end-column="9" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
             <element signature="e#68#2082#0" />
             <element signature="e#2103#6233#0" />
+            <element signature="e#6296#6927#0" />
+            <element signature="e#6949#7472#0" />
+            <element signature="e#7526#7966#0" />
+            <element signature="e#7999#8110#0" />
+            <element signature="e#8163#8379#0" />
+            <element signature="e#8412#8545#0" />
+            <element signature="e#8599#8848#0" />
+            <element signature="e#8881#8992#0" />
+            <element signature="e#9043#9203#0" />
+            <element signature="e#9236#9347#0" />
+            <element signature="e#9399#9530#0" />
+            <element signature="e#9563#9675#0" />
+            <element signature="e#9731#9800#0" />
+            <element signature="e#9833#9903#0" />
+            <element signature="e#9958#10213#0" />
+            <element signature="e#10246#10358#0" />
+            <element signature="e#10405#10596#0" />
+            <element signature="e#10629#11038#0" />
+            <element signature="e#11082#11242#0" />
+            <element signature="e#11275#11538#0" />
+            <element signature="e#11591#11660#0" />
+            <element signature="e#11693#12050#0" />
+            <element signature="e#12100#12568#0" />
+            <element signature="e#12601#13179#0" />
+            <element signature="e#13232#13301#0" />
+            <element signature="e#13334#13432#0" />
+            <element signature="e#13479#13579#0" />
+            <element signature="e#13612#13980#0" />
+            <element signature="e#14031#14133#0" />
+            <element signature="e#14166#14270#0" />
+            <element signature="e#14319#14484#0" />
+            <element signature="e#14517#14575#0" />
+            <element signature="e#14612#15067#0" />
+            <element signature="e#15188#15615#0" />
+            <element signature="e#15671#16126#0" />
+            <element signature="e#16152#16649#0" />
+            <element signature="e#16676#17108#0" />
             <element signature="e#18932#20688#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
