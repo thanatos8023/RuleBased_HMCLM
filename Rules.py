@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
-from eunjeon import Mecab
+#from eunjeon import Mecab
+import mecab
 import re
 import json
 import os
@@ -35,7 +36,7 @@ class Model(object):
         ####################################
 
         # 형태소 분석기 Mecab 불러오기
-        self.mecab = Mecab()
+        self.mecab = mecab.MeCab()
 
         # API 서버에서 요청은 json 형식으로 전달된다.
         # 전달된 json을 parsing 해서 dictionary로 활용함
