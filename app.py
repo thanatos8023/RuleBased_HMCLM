@@ -10,10 +10,9 @@ app = Flask(__name__)
 
 @app.route('/dm', methods=['GET', 'POST'])
 def get_intention():
-    jsonData = request.get_json()
-    print(jsonData["utt"])
-    print(jsonData["user_key"])
-    model = Rules.Model(jsonData)
+    print(request.form["utt"])
+    print(request.form["user_key"])
+    model = Rules.Model(request.form)
     print(model)
     res = Rules.make_response(model)
     print(res)
