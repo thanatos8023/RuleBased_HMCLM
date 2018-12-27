@@ -10,7 +10,9 @@ app = Flask(__name__)
 
 @app.route('/dm', methods=['GET', 'POST'])
 def get_intention():
-    print(request)
+    print(request.data)
+    print(request.form)
+    print(request.url)
     model = Rules.Model(request.data)
     print(model)
     res = Rules.make_response(model)
