@@ -41,6 +41,7 @@ class Model(object):
         # API 서버에서 요청은 json 형식으로 전달된다.
         # 전달된 json을 parsing 해서 dictionary로 활용함
         # json 모듈 활용
+        print(req)
         req_body = json.loads(req)
 
         # API 서버에서 받은 요청을 활용하기 쉽도록 개별 변수에 저장한다.
