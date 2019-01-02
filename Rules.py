@@ -167,9 +167,9 @@ class Model(object):
     def str2obj(self, string):
         # string: ooo/NNN,qqq/SSS
         # object: {('ooo', 'NNN'), ('qqq', 'SSS')}
-        if type(string) is None or string == '':
+        if (type(string) is None) or (string == ''):
             return ''
-        
+
         splitted_morph = string.split(',')
 
         result = []
