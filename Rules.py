@@ -170,13 +170,16 @@ class Model(object):
         if (type(string) is None) or (string == ''):
             return ''
 
-        splitted_morph = string.split(',')
+        try:
+            splitted_morph = string.split(',')
 
-        result = []
-        for morph_tag in splitted_morph:
-            result.append(morph_tag.split('/'))
+            result = []
+            for morph_tag in splitted_morph:
+                result.append(morph_tag.split('/'))
 
-        return result
+            return result
+        except:
+            print("%% ERROR!! Not String ::: " + string)
 
 
     # DB 에서 DM 정보를 불러오는 함수
