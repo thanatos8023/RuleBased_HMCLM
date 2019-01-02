@@ -244,10 +244,10 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
-                    if rule_result[2+i]:
-                        rule_temp.append(self.str2obj(rule_result[2+i]))
-                    else:
+                    if not rule_result[2+i]:
                         break
+                    else:
+                        rule_temp.append(self.str2obj(rule_result[2 + i]))
 
                 # 규칙 가져오기 끝: 변수명 rule_temp
 
