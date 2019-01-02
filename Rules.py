@@ -238,7 +238,7 @@ class Model(object):
             # 의도 목록을 기준으로 Rule과 Response를 정리함
             for intention in intention_set:
                 # 규칙 가져오기
-                rule_sql = 'SELECT * FROM tb_rule WHERE intention=?'
+                rule_sql = 'SELECT * FROM tb_rule WHERE intention=%s'
                 cursor.execute(rule_sql, (intention))
                 rule_result = cursor.fetchone()
 
@@ -252,7 +252,7 @@ class Model(object):
                 # 규칙 가져오기 끝: 변수명 rule_temp
 
                 # 응답 가져오기
-                res_sql = 'SELECT * FROM tb_response_text WHERE intention=?'
+                res_sql = 'SELECT * FROM tb_response_text WHERE intention=%s'
                 cursor.execute(res_sql, (intention))
 
                 res_temp = {}
