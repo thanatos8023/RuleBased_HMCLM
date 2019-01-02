@@ -179,7 +179,7 @@ class Model(object):
 
             return result
         except:
-            print("%% ERROR!! Not String ::: " + string)
+            print("%% ERROR!! Not String")
 
 
     # DB 에서 DM 정보를 불러오는 함수
