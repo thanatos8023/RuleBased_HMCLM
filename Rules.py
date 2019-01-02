@@ -179,7 +179,7 @@ class Model(object):
 
             return result
         except:
-            print("%% ERROR!! Not String")
+            pass
 
 
     # DB 에서 DM 정보를 불러오는 함수
@@ -250,7 +250,10 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
-                    rule_temp.append(self.str2obj(rule_result[2 + i]))
+                    try:
+                        rule_temp.append(self.str2obj(rule_result[2 + i]))
+                    except:
+                        pass
 
                 # 규칙 가져오기 끝: 변수명 rule_temp
 
