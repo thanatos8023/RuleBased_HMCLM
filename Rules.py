@@ -244,7 +244,7 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
-                    if type(rule_result[2+i]) == None:
+                    if type(rule_result[2+i]) is None or rule_result[2+i] == '' or rule_result[2+i] is None:
                         break
                     else:
                         rule_temp.append(self.str2obj(rule_result[2 + i]))
