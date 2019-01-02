@@ -395,6 +395,7 @@ class Model(object):
 
         with connection.cursor() as cur:
             sql = 'SELECT * FROM tb_user_input'
+            cur.execute(sql)
 
             for row in cur:
                 if self.utt == row[2]:
