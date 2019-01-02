@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abb75396-c67c-4620-b298-ac48e95591af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_rule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mecabtest.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/mecabtest.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rule_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/rule_test.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,48 +19,51 @@
     <session id="-304191152">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="29" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
-          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.18" value="3" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="450" />
-          <entry key="py" value="24519" />
+          <entry key="Python Console" value="557" />
+          <entry key="py" value="29758" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="24969" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="30315" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="1" />
           <entry key="PLAIN_TEXT" value="16" />
-          <entry key="Python" value="10" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="1" />
-          <entry key="py" value="10" />
+          <entry key="py" value="11" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
@@ -70,79 +73,74 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rules.py">
+        <entry file="file://$PROJECT_DIR$/make_rule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3547">
-              <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+            <state relative-caret-position="527">
+              <caret line="271" column="13" lean-forward="true" selection-start-line="257" selection-start-column="12" selection-end-line="271" selection-end-column="13" />
               <folding>
-                <element signature="e#24#49#0" expanded="true" />
-                <marker date="1542620307296" expanded="true" signature="6268:6273" ph="..." />
-                <marker date="1542620307296" expanded="true" signature="6268:6440" ph="..." />
-                <marker date="1542620307296" expanded="true" signature="10448:11456" ph="..." />
+                <element signature="e#24#37#0" expanded="true" />
+                <element signature="e#68#2082#0" />
+                <element signature="e#2103#6233#0" />
+                <element signature="e#7508#8117#0" />
+                <element signature="e#8145#8552#0" />
+                <element signature="e#8581#8999#0" />
+                <element signature="e#9025#9354#0" />
+                <element signature="e#9381#9682#0" />
+                <element signature="e#9713#9910#0" />
+                <element signature="e#9940#10365#0" />
+                <element signature="e#9958#10213#0" />
+                <element signature="e#10387#11045#0" />
+                <element signature="e#11064#11545#0" />
+                <element signature="e#11573#12057#0" />
+                <element signature="e#12082#13186#0" />
+                <element signature="e#13214#13439#0" />
+                <element signature="e#13461#13987#0" />
+                <element signature="e#14013#14277#0" />
+                <element signature="e#14301#14582#0" />
+                <element signature="e#14612#15067#0" />
+                <element signature="e#15188#15615#0" />
+                <element signature="e#15671#16126#0" />
+                <element signature="e#16152#16649#0" />
+                <element signature="e#16676#17108#0" />
+                <element signature="e#17137#17532#0" />
+                <element signature="e#17560#17768#0" />
+                <element signature="e#17795#18078#0" />
+                <element signature="e#18104#18653#0" />
+                <element signature="e#18932#19251#0" />
+                <element signature="e#19274#19690#0" />
+                <element signature="e#19711#20150#0" />
+                <element signature="e#20177#20582#0" />
+                <element signature="e#20615#21041#0" />
+                <element signature="e#21071#21447#0" />
+                <element signature="e#21473#21822#0" />
+                <element signature="e#21841#23597#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/make_rule.py">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
-              <caret line="623" column="9" selection-start-line="623" selection-start-column="9" selection-end-line="623" selection-end-column="9" />
+            <state relative-caret-position="272">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="14" />
               <folding>
-                <element signature="e#24#37#0" expanded="true" />
-                <element signature="e#68#2082#0" />
-                <element signature="e#2103#6233#0" />
-                <element signature="e#6296#6927#0" />
-                <element signature="e#6949#7472#0" />
-                <element signature="e#7526#7966#0" />
-                <element signature="e#7999#8110#0" />
-                <element signature="e#8163#8379#0" />
-                <element signature="e#8412#8545#0" />
-                <element signature="e#8599#8848#0" />
-                <element signature="e#8881#8992#0" />
-                <element signature="e#9043#9203#0" />
-                <element signature="e#9236#9347#0" />
-                <element signature="e#9399#9530#0" />
-                <element signature="e#9563#9675#0" />
-                <element signature="e#9731#9800#0" />
-                <element signature="e#9833#9903#0" />
-                <element signature="e#9958#10213#0" />
-                <element signature="e#10246#10358#0" />
-                <element signature="e#10405#10596#0" />
-                <element signature="e#10629#11038#0" />
-                <element signature="e#11082#11242#0" />
-                <element signature="e#11275#11538#0" />
-                <element signature="e#11591#11660#0" />
-                <element signature="e#11693#12050#0" />
-                <element signature="e#12100#12568#0" />
-                <element signature="e#12601#13179#0" />
-                <element signature="e#13232#13301#0" />
-                <element signature="e#13334#13432#0" />
-                <element signature="e#13479#13579#0" />
-                <element signature="e#13612#13980#0" />
-                <element signature="e#14031#14133#0" />
-                <element signature="e#14166#14270#0" />
-                <element signature="e#14319#14484#0" />
-                <element signature="e#14517#14575#0" />
-                <element signature="e#14612#15067#0" />
-                <element signature="e#15188#15615#0" />
-                <element signature="e#15671#16126#0" />
-                <element signature="e#16152#16649#0" />
-                <element signature="e#16676#17108#0" />
-                <element signature="e#18932#20688#0" />
+                <element signature="e#24#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.py">
+        <entry file="file://$PROJECT_DIR$/Rules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            <state relative-caret-position="879">
+              <caret line="410" column="21" selection-start-line="410" selection-start-column="21" selection-end-line="410" selection-end-column="21" />
               <folding>
-                <element signature="e#24#47#0" expanded="true" />
+                <element signature="e#51#63#0" expanded="true" />
+                <element signature="e#2861#5349#0" />
+                <marker date="1546413263897" expanded="true" signature="5372:5381" ph="..." />
+                <marker date="1546413263897" expanded="true" signature="5372:5640" ph="..." />
               </folding>
             </state>
           </provider>
@@ -174,16 +172,15 @@
         <option value="$PROJECT_DIR$/corpus/SmallTalk_AgeRU.txt" />
         <option value="$PROJECT_DIR$/mecabtest.ipynb" />
         <option value="$PROJECT_DIR$/make_responses.py" />
+        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/make_rule.py" />
         <option value="$PROJECT_DIR$/Rules.py" />
-        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1002" />
+    <option name="width" value="897" />
     <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -191,20 +188,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="RuleBased_HMCLM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RuleBased_HMCLM" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -332,6 +316,14 @@
       <option name="presentableId" value="Default" />
       <updated>1540540907838</updated>
     </task>
+    <task id="LOCAL-00001" summary="debugging">
+      <created>1545894272673</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545894272673</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -344,15 +336,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1002" y="0" width="897" height="1096" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16684435" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1716418" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33224756" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33224756" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28741866" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286334" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33224756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28741866" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,24 +379,18 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugging" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Rules.py</url>
-          <line>256</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Rules.py</url>
-          <line>205</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../hmcLM/app.py</url>
           <line>2</line>
@@ -480,75 +487,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rules.py">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3547">
-          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="272">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="14" />
           <folding>
-            <element signature="e#24#49#0" expanded="true" />
-            <marker date="1542620307296" expanded="true" signature="6268:6273" ph="..." />
-            <marker date="1542620307296" expanded="true" signature="6268:6440" ph="..." />
-            <marker date="1542620307296" expanded="true" signature="10448:11456" ph="..." />
+            <element signature="e#24#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/make_rule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="623" column="9" selection-start-line="623" selection-start-column="9" selection-end-line="623" selection-end-column="9" />
+        <state relative-caret-position="527">
+          <caret line="271" column="13" lean-forward="true" selection-start-line="257" selection-start-column="12" selection-end-line="271" selection-end-column="13" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
             <element signature="e#68#2082#0" />
             <element signature="e#2103#6233#0" />
-            <element signature="e#6296#6927#0" />
-            <element signature="e#6949#7472#0" />
-            <element signature="e#7526#7966#0" />
-            <element signature="e#7999#8110#0" />
-            <element signature="e#8163#8379#0" />
-            <element signature="e#8412#8545#0" />
-            <element signature="e#8599#8848#0" />
-            <element signature="e#8881#8992#0" />
-            <element signature="e#9043#9203#0" />
-            <element signature="e#9236#9347#0" />
-            <element signature="e#9399#9530#0" />
-            <element signature="e#9563#9675#0" />
-            <element signature="e#9731#9800#0" />
-            <element signature="e#9833#9903#0" />
+            <element signature="e#7508#8117#0" />
+            <element signature="e#8145#8552#0" />
+            <element signature="e#8581#8999#0" />
+            <element signature="e#9025#9354#0" />
+            <element signature="e#9381#9682#0" />
+            <element signature="e#9713#9910#0" />
+            <element signature="e#9940#10365#0" />
             <element signature="e#9958#10213#0" />
-            <element signature="e#10246#10358#0" />
-            <element signature="e#10405#10596#0" />
-            <element signature="e#10629#11038#0" />
-            <element signature="e#11082#11242#0" />
-            <element signature="e#11275#11538#0" />
-            <element signature="e#11591#11660#0" />
-            <element signature="e#11693#12050#0" />
-            <element signature="e#12100#12568#0" />
-            <element signature="e#12601#13179#0" />
-            <element signature="e#13232#13301#0" />
-            <element signature="e#13334#13432#0" />
-            <element signature="e#13479#13579#0" />
-            <element signature="e#13612#13980#0" />
-            <element signature="e#14031#14133#0" />
-            <element signature="e#14166#14270#0" />
-            <element signature="e#14319#14484#0" />
-            <element signature="e#14517#14575#0" />
+            <element signature="e#10387#11045#0" />
+            <element signature="e#11064#11545#0" />
+            <element signature="e#11573#12057#0" />
+            <element signature="e#12082#13186#0" />
+            <element signature="e#13214#13439#0" />
+            <element signature="e#13461#13987#0" />
+            <element signature="e#14013#14277#0" />
+            <element signature="e#14301#14582#0" />
             <element signature="e#14612#15067#0" />
             <element signature="e#15188#15615#0" />
             <element signature="e#15671#16126#0" />
             <element signature="e#16152#16649#0" />
             <element signature="e#16676#17108#0" />
-            <element signature="e#18932#20688#0" />
+            <element signature="e#17137#17532#0" />
+            <element signature="e#17560#17768#0" />
+            <element signature="e#17795#18078#0" />
+            <element signature="e#18104#18653#0" />
+            <element signature="e#18932#19251#0" />
+            <element signature="e#19274#19690#0" />
+            <element signature="e#19711#20150#0" />
+            <element signature="e#20177#20582#0" />
+            <element signature="e#20615#21041#0" />
+            <element signature="e#21071#21447#0" />
+            <element signature="e#21473#21822#0" />
+            <element signature="e#21841#23597#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/Rules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="879">
+          <caret line="410" column="21" selection-start-line="410" selection-start-column="21" selection-end-line="410" selection-end-column="21" />
           <folding>
-            <element signature="e#24#47#0" expanded="true" />
+            <element signature="e#51#63#0" expanded="true" />
+            <element signature="e#2861#5349#0" />
+            <marker date="1546413263897" expanded="true" signature="5372:5381" ph="..." />
+            <marker date="1546413263897" expanded="true" signature="5372:5640" ph="..." />
           </folding>
         </state>
       </provider>

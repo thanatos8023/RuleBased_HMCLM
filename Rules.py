@@ -8,7 +8,7 @@ import os
 import glob
 import pickle
 import random
-
+import pymysql
 
 class Model(object):
     def __init__(self, req):
@@ -78,8 +78,9 @@ class Model(object):
         # 이후로 DB 로 대체도 가능
         # 불러온 정보는 dictionary 형식으로 저장됨
         # 자세한 형식은 make_rule.py 참조
-        with open('dm.pickle', 'rb') as f:
-            self.dm = pickle.load(f)
+
+        # DB 교체
+        self.dm = self.get_DM_from_DB()
 
         # 사용자 발화에서 pin 을 찾는 코드
         # pin이 아닐 경우, False 가 저장됨
@@ -92,6 +93,196 @@ class Model(object):
             self.intention = req_body['intention']
         else:
             self.intention = self.__get_intention__()
+
+    def get_responseForm(self, response_text_row_in_db):
+        # column name and index matching
+        # domain            :   0
+        # intention         :   1
+        # chatbot_status    :   2
+        # response_type     :   3
+        # response_text     :   4
+        # response_object1  :   5
+        # response_object2  :   6
+        if response_text_row_in_db[3] == 'simpleText':
+            responseForm = {
+                "type": response_text_row_in_db[3],
+                "text": response_text_row_in_db[4]
+            }
+        elif response_text_row_in_db[3] == 'messageButton':
+            buttons = json.loads(response_text_row_in_db[5])
+            responseForm = {
+                "type": response_text_row_in_db[3],
+                "text": response_text_row_in_db[4],
+                "buttons": buttons,
+            }
+        elif response_text_row_in_db[3] == 'quickReply':
+            quickReplies = json.loads(response_text_row_in_db[5])
+            responseForm = {
+                "type": response_text_row_in_db[3],
+                "text": response_text_row_in_db[4],
+                "quickReplies": quickReplies,
+            }
+        elif response_text_row_in_db[3] == 'imageButton':
+            responseForm = {
+                "type": response_text_row_in_db[3],
+                "text": response_text_row_in_db[4],
+                "imageUrl": response_text_row_in_db[5],
+                "buttons": json.loads(response_text_row_in_db[6])
+            }
+        elif response_text_row_in_db[3] == 'list':
+            # DB 연결
+            connection = pymysql.connect(
+                host='127.0.0.1',
+                user='hmc',
+                password='aleldjwps',
+                db='hmc_chatbot',
+            )
+
+            with connection.cursor() as cur:
+                query = response_text_row_in_db[5]
+                cur.execute(query)
+                items = []
+                for row in cur:
+                    item = {
+                        "title": row[0],
+                        "description": row[1],
+                        "imageUrl": row[4],
+                        "homepage": row[3],
+                    }
+                    items.append(item)
+
+            responseForm = {
+                "type": response_text_row_in_db[3],
+                "text": response_text_row_in_db[4],
+                "items": items,
+            }
+        else:
+            responseForm = {
+                "type": "simpleText",
+                "text": "죄송해요. 제가 잘 이해하지 못했어요."
+            }
+
+        return responseForm
+
+    def str2obj(self, string):
+        # string: ooo/NNN,qqq/SSS
+        # object: {('ooo', 'NNN'), ('qqq', 'SSS')}
+        splitted_morph = string.split(',')
+
+        result = []
+        for morph_tag in splitted_morph:
+            result.append(morph_tag.split('/'))
+
+        return result
+
+
+    # DB 에서 DM 정보를 불러오는 함수
+    ### DB 에 필요한 필드
+    # 'Buttons': 버튼 입력 목록 (* FROM tb_user_input WHERE intention=button)
+    # 'Intentions': 의도와 필수형태소 객체 (* FROM tb_rule WHERE intention, rule)
+    # 'Errors': 에러 반응 텍스트 (* FROM tb_user_input WHERE intention=error)
+    # 'Pin': PIN 입력 후 대화 반응 (삭제 예정)
+    def get_DM_from_DB(self):
+        # DB 연결
+        connection = pymysql.connect(
+            host='127.0.0.1',
+            user='hmc',
+            password='aleldjwps',
+            db='hmc_chatbot',
+        )
+
+        with connection.cursor() as cursor:
+            ## Buttons 채우기
+            sql = 'SELECT * FROM tb_response_text WHERE intention="Button"'
+            cursor.execute(sql)
+
+            # key: button label
+            # value: response form
+            buttons = {}
+            for row in cursor:
+                # setting response form
+                # response form example
+                # {
+                #   "type": ..,
+                #   "text": ..,
+                #   "buttons": ..,
+                #   ..
+                # }
+                buttons[row[2]] = self.get_responseForm(row)
+
+            ## Buttons 완성: 변수명 buttons
+
+            ## Errors 채우기
+            sql = 'SELECT * FROM tb_response_text WHERE intention="Error"'
+            cursor.execute(sql)
+
+            # key: error number (string)
+            # value: response form
+            errors = {}
+            for row in cursor:
+                errors[row[2]] = self.get_responseForm(row)
+
+            ## Errors 완성: 변수명 errors
+
+            ## Intentions 채우기
+            intentions = {}
+            # 의도 목록이 필요함
+            sql = 'SELECT * FROM tb_user_input'
+            cursor.execute(sql)
+            intention_list = []
+            for row in cursor:
+                intention_list.append(row[1])
+            intention_set = list(set(intention_list))
+
+            # 의도 목록 intention_set
+            # 의도 목록을 기준으로 Rule과 Response를 정리함
+            for intention in intention_set:
+                # 규칙 가져오기
+                rule_sql = 'SELECT * FROM tb_rule WHERE intention=?'
+                cursor.execute(rule_sql, (intention))
+                rule_result = cursor.fetchone()
+
+                rule_temp = []
+                for i in range(3):
+                    if rule_result[2+i]:
+                        rule_temp.append(self.str2obj(rule_result[2+i]))
+                    else:
+                        break
+
+                # 규칙 가져오기 끝: 변수명 rule_temp
+
+                # 응답 가져오기
+                res_sql = 'SELECT * FROM tb_response_text WHERE intention=?'
+                cursor.execute(res_sql, (intention))
+
+                res_temp = {}
+                for status_row in cursor:
+                    res_temp[status_row[2]] = self.get_responseForm(status_row)
+
+                # 응답 가져오기 끝: 변수명 res_temp
+
+                # 의도 채우기
+                intentions[intention] = {
+                    'Rule': rule_temp,
+                    'Response': res_temp
+                }
+
+            ## Intentions 완성: 변수명 intentions
+
+            ## Pin은 삭제
+
+        # DB 닫기
+        connection.close()
+
+        # 결과
+        dm = {
+            'Buttons': buttons,
+            'Errors': errors,
+            'Intentions': intentions,
+        }
+
+        return dm
+
 
     # 사용자 입력 발화에서 pin을 찾는 함수
     def __get_pin__(self):
@@ -188,188 +379,33 @@ class Model(object):
 
     # 코퍼스에서 입력 발화를 검색하는 함수
     def __get_intention_from_corpus__(self):
-        # corpus loading
-        filelist = glob.glob('corpus/*.txt')
-        for file in filelist:
-            # searching file by file (= intention by intention)
-            with open(file, 'r', encoding='utf-8') as f:
-                corpus_intention = os.path.basename(file).replace('.txt', '')
-                corpus_raw = f.read().split('\n')
+        # DB 연결
+        connection = pymysql.connect(
+            host='127.0.0.1',
+            user='hmc',
+            password='aleldjwps',
+            db='hmc_chatbot',
+        )
 
-            for raw_sent in corpus_raw:
-                if raw_sent == self.utt:
-                    return corpus_intention
+        with connection.cursor() as cur:
+            sql = 'SELECT * FROM tb_user_input'
+
+            for row in cur:
+                if self.utt == row[2]:
+                    return row[1]
 
         return None
 
 
-def insert_temperature_into_json(form_data, temp):
-    # form_data = json
-    # temp = {}.format
-    form = json.loads(form_data)
-    form['message']['text'] = form['message']['text'] % temp
-
-    return json.dumps(form)
-
-
-# 요청에 대한 응답을 만드는 함수
-def make_response(model):
-    response_template = {
-        'status': '',
-        'form': '',
-        'user_key': '',
-        'intention': '',
-        'options': 0
-    }
-    # Step 1
-    if model.pin and model.code == '7000':
-        if model.intention == "Control_Engine_Start":
-            response_template['form'] = insert_temperature_into_json(model.dm['Pin'][model.intention], model.options)
-        else:
-            response_template['form'] = model.dm['Pin'][model.intention]
-        response_template['status'] = '8000'
-        response_template['user_key'] = model.user_key
-        response_template['intention'] = model.intention
-        return response_template
-
-    # Step 2
-    if model.code in model.dm['Errors'].keys():
-        response_template['form'] = model.dm['Errors'][model.code]
-        response_template['status'] = '100'
-        response_template['user_key'] = model.user_key
-        response_template['intention'] = model.intention
-        return response_template
-
-    # Step 3
-    if model.intention:
-        if model.intention == 'Buttons':
-            response_template['form'] = model.dm[model.intention][model.utt]
-            response_template['status'] = '100'
-            response_template['user_key'] = model.user_key
-            response_template['intention'] = model.intention
-
-        elif model.intention == 'Control_Engine_Start':
-            temp = model.get_temperature_from_utterance()
-            if temp == -1:
-                response_template['status'] = '7001'
-                response_template['form'] = model.dm['Intentions'][model.intention]['Response']['noTemp']
-            elif temp == -273:
-                response_template['status'] = '7001'
-                response_template['form'] = model.dm['Intentions'][model.intention]['Response']['tempError']
-            else:
-                response_template['status'] = '7000'
-                response_template['form'] = insert_temperature_into_json(model.dm['Intentions'][model.intention]['Response']['temp'], int(temp))
-                response_template['options'] = temp
-
-            response_template['user_key'] = model.user_key
-            response_template['intention'] = model.intention
-
-        else:
-            response_template['form'] = model.dm['Intentions'][model.intention]['Response']
-            if model.intention.find('Control') > -1 and not model.intention == 'Control_Door_Open':
-                response_template['status'] = '8000'
-            else:
-                response_template['status'] = '100'
-            response_template['user_key'] = model.user_key
-            
-            response_template['intention'] = model.intention
-
-    else:
-        response_template['form'] = json.dumps({
-            'message': {
-                'text': '죄송해요... 제가 잘 이해하지 못했어요.'
-            }
-        })
-        response_template['status'] = '100'
-        response_template['user_key'] = model.user_key
-        response_template['intention'] = model.intention
-
-    return response_template
-
-
-def evaluation():
-    req = {
-        'utt': '',
-        'code': 7000,
-        'user_key': 'asdfqew52',
-        'intention': '',
-        'options': 0
-    }
-
-    while True:
-        message = input('사용자 입력: ')
-
-        if message == '나가기':
-            break
-        else:
-            req['utt'] = message
-
-        m = Model(json.dumps(req))
-
-        res = make_response(m)
-
-        res_dict_form = json.loads(res['form'])
-        ###################################
-        # Response form
-        # 'form': json form for sending to chatting API
-        # 'status': code for processing dialog
-        # 'user_key': identification for user
-        ####################################
-
-        if res['status'] == '100':
-            req['code'] = ''
-            req['intention'] = ''
-        else:
-            req['code'] = res['status']
-            req['intention'] = res['intention']
-            req['options'] = res['options']
-
-        print(res_dict_form['message']['text'])
-
-
-def get_score():
-    filelist = glob.glob('corpus/Control*.txt')
-    raw = []
-    for filename in filelist:
-        with open(filename, 'r', encoding='utf-8') as f:
-            raw += f.read().split('\n')
-
-    random.shuffle(raw)
-    test = raw[:1000]
-
-    n = 0
-
-    correction = []
-    incorrect = []
-
-    for sent in test:
-        req = {
-            'utt': sent,
-            'code': 7000,
-            'user_key': 'asdfqew52',
-            'intention': '',
-            'options': 0
-        }
-
-        m = Model(json.dumps(req))
-
-        if m.intention:
-            correction.append((sent, m.intention))
-        else:
-            incorrect.append((sent, m.intention))
-
-    for i in range(100):
-        print("{} ---> {}".format(correction[i][0], correction[i][1]))
-
-    print("Correction: ", len(correction) / len(test))
-
-    if not incorrect == []:
-        print('-'*30)
-        print('Incorrection')
-        for i in range(5):
-            print("{} ---> {}".format(incorrect[i][0], incorrect[i][1]))
-
-
 if __name__ == '__main__':
-    #evaluation()
-    get_score()
+    req = {
+        'user_key': 'sf1234dsf',
+        'utt': '17도로 시동 켜줘',
+        'code': 7000,
+        'intention': '',
+        'options': 0
+    }
+
+    m = Model(req)
+
+    print(m.intention)

@@ -13,7 +13,7 @@ def get_intention():
     print(request.form["utt"])
     print(request.form["user_key"])
     model = Rules.Model(request.form)
-    print(model)
+
     res = Rules.make_response(model)
     print(res)
     return json.dumps(res)
