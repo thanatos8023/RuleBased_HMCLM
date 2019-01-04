@@ -94,6 +94,29 @@ class Model(object):
         else:
             self.intention = self.__get_intention__()
 
+        ## 응답 형식
+
+    ## 미완성
+    def make_response(self):
+        # DB 연결
+        connection = pymysql.connect(
+            host='127.0.0.1',
+            user='hmc',
+            password='aleldjwps',
+            db='hmc_chatbot',
+        )
+
+        with connection.cursor() as user_cursor:
+            user_sql = 'SELECT * FROM tb_user_info WHERE kakao_info=%s'
+            user_cursor.execute(user_sql, (self.user_key))
+
+            user_info = user_cursor.fetchone()
+
+            if not user_info:
+                return self.dm["Intentions"]
+
+
+
     def get_responseForm(self, response_text_row_in_db):
         # column name and index matching
         # domain            :   0
