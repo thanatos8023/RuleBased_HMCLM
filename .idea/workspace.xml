@@ -39,14 +39,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="734" />
-          <entry key="py" value="31510" />
+          <entry key="py" value="31512" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="32244" />
+          <entry key="Python" value="32246" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -130,13 +130,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Rules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="353" column="89" selection-start-line="353" selection-start-column="89" selection-end-line="353" selection-end-column="89" />
+            <state relative-caret-position="482">
+              <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
               <folding>
                 <element signature="e#51#63#0" expanded="true" />
-                <marker date="1546937199585" expanded="true" signature="2741:3236" ph="..." />
-                <marker date="1546937199585" expanded="false" signature="3902:3911" ph="..." />
-                <marker date="1546937199585" expanded="true" signature="3902:4317" ph="..." />
+                <marker date="1546937356289" expanded="true" signature="2741:3236" ph="..." />
+                <marker date="1546937356289" expanded="false" signature="3902:3911" ph="..." />
+                <marker date="1546937356289" expanded="true" signature="3902:4317" ph="..." />
               </folding>
             </state>
           </provider>
@@ -563,13 +563,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Rules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="353" column="89" selection-start-line="353" selection-start-column="89" selection-end-line="353" selection-end-column="89" />
+        <state relative-caret-position="482">
+          <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
           <folding>
             <element signature="e#51#63#0" expanded="true" />
-            <marker date="1546937199585" expanded="true" signature="2741:3236" ph="..." />
-            <marker date="1546937199585" expanded="false" signature="3902:3911" ph="..." />
-            <marker date="1546937199585" expanded="true" signature="3902:4317" ph="..." />
+            <marker date="1546937356289" expanded="true" signature="2741:3236" ph="..." />
+            <marker date="1546937356289" expanded="false" signature="3902:3911" ph="..." />
+            <marker date="1546937356289" expanded="true" signature="3902:4317" ph="..." />
           </folding>
         </state>
       </provider>
