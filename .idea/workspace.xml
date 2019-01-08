@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abb75396-c67c-4620-b298-ac48e95591af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rules.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/make_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_rule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mecabtest.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/mecabtest.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rule_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/rule_test.ipynb" afterDir="false" />
     </list>
@@ -17,14 +16,14 @@
     <session id="-304191152">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="29" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.10" value="5" />
+          <entry key="project.closed" value="37" />
+          <entry key="project.open.time.0" value="5" />
+          <entry key="project.open.time.10" value="7" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
@@ -33,22 +32,23 @@
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="2" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="32" />
+          <entry key="project.opened" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="557" />
-          <entry key="py" value="29977" />
+          <entry key="Python Console" value="709" />
+          <entry key="py" value="31461" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="30534" />
+          <entry key="Python" value="32170" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/make_rule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="271" column="13" lean-forward="true" selection-start-line="257" selection-start-column="12" selection-end-line="271" selection-end-column="13" />
+            <state relative-caret-position="528">
+              <caret line="271" column="13" selection-start-line="257" selection-start-column="12" selection-end-line="271" selection-end-column="13" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
                 <element signature="e#68#2082#0" />
@@ -120,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="14" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="14" />
+            <state relative-caret-position="496">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
               <folding>
                 <element signature="e#24#47#0" expanded="true" />
               </folding>
@@ -132,13 +132,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Rules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+            <state relative-caret-position="370">
+              <caret line="347" column="29" lean-forward="true" selection-start-line="347" selection-start-column="29" selection-end-line="347" selection-end-column="29" />
               <folding>
                 <element signature="e#51#63#0" expanded="true" />
-                <element signature="e#2861#5349#0" />
-                <marker date="1546414233407" expanded="true" signature="5372:5381" ph="..." />
-                <marker date="1546414233407" expanded="true" signature="5372:5822" ph="..." />
+                <marker date="1546936155494" expanded="true" signature="2741:3236" ph="..." />
+                <marker date="1546936155494" expanded="false" signature="3902:3911" ph="..." />
+                <marker date="1546936155494" expanded="true" signature="3902:4317" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,6 +159,10 @@
       <find>Fail</find>
       <find>%d</find>
       <find>options</find>
+      <find>__get_pin__</find>
+      <find>get_temperature_from_utterance</find>
+      <find>get_responseForm</find>
+      <find>str2obj</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,16 +174,17 @@
         <option value="$PROJECT_DIR$/corpus/SmallTalk_AgeRU.txt" />
         <option value="$PROJECT_DIR$/mecabtest.ipynb" />
         <option value="$PROJECT_DIR$/make_responses.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/make_rule.py" />
+        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/Rules.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1002" />
-    <option name="width" value="897" />
-    <option name="height" value="1096" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -189,6 +194,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tempCr" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -334,7 +340,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1002" y="0" width="897" height="1096" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1716418" />
@@ -350,7 +356,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286334" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3275488" />
+      <window_info active="true" anchor="bottom" id="SonarLint" order="11" visible="true" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -485,20 +492,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="14" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/make_rule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="271" column="13" lean-forward="true" selection-start-line="257" selection-start-column="12" selection-end-line="271" selection-end-column="13" />
+        <state relative-caret-position="528">
+          <caret line="271" column="13" selection-start-line="257" selection-start-column="12" selection-end-line="271" selection-end-column="13" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
             <element signature="e#68#2082#0" />
@@ -540,15 +537,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Rules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+        <state relative-caret-position="370">
+          <caret line="347" column="29" lean-forward="true" selection-start-line="347" selection-start-column="29" selection-end-line="347" selection-end-column="29" />
           <folding>
             <element signature="e#51#63#0" expanded="true" />
-            <element signature="e#2861#5349#0" />
-            <marker date="1546414233407" expanded="true" signature="5372:5381" ph="..." />
-            <marker date="1546414233407" expanded="true" signature="5372:5822" ph="..." />
+            <marker date="1546936155494" expanded="true" signature="2741:3236" ph="..." />
+            <marker date="1546936155494" expanded="false" signature="3902:3911" ph="..." />
+            <marker date="1546936155494" expanded="true" signature="3902:4317" ph="..." />
           </folding>
         </state>
       </provider>

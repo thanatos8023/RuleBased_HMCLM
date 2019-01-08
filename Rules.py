@@ -342,14 +342,14 @@ class Model(object):
             for necset in self.dm['Intentions'][key]['Rule']:
                 # There are set of morphs
                 # matched
-                try:
-                    matched = necset & set(self.pos)
-                    if not matched:
-                        break
-                    else:
-                        matched_case += 1
-                except:
+                if not necset:
+                    continue
+
+                matched = necset & set(self.pos)
+                if not matched:
                     break
+                else:
+                    matched_case += 1
 
             if matched_case == len(self.dm['Intentions'][key]['Rule']):
                 # This case, the utterance is in this intention
