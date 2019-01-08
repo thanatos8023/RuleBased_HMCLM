@@ -32,7 +32,7 @@ def get_intention_only():
         'options': 0,
     }
 
-    model = Rules.Model(req)
+    model = Rules.Model(json.dumps(req))
     intention = model.intention
     print("Output:", intention)
 
