@@ -342,6 +342,7 @@ class Model(object):
             for necset in self.dm['Intentions'][key]['Rule']:
                 # There are set of morphs
                 # matched
+                print(type(necset))
                 matched = necset & set(self.pos)
                 if not matched:
                     break
