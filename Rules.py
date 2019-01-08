@@ -129,64 +129,12 @@ class Model(object):
 
         #print(response_text_row_in_db)
 
-        if response_text_row_in_db[3] == 'simpleText':
-            responseForm = {
-                "type": response_text_row_in_db[3],
-                "text": response_text_row_in_db[4]
-            }
-        elif response_text_row_in_db[3] == 'messageButton':
-            buttons = json.loads(response_text_row_in_db[5])
-            responseForm = {
-                "type": response_text_row_in_db[3],
-                "text": response_text_row_in_db[4],
-                "buttons": buttons,
-            }
-        elif response_text_row_in_db[3] == 'quickReply':
-            quickReplies = json.loads(response_text_row_in_db[5])
-            responseForm = {
-                "type": response_text_row_in_db[3],
-                "text": response_text_row_in_db[4],
-                "quickReplies": quickReplies,
-            }
-        elif response_text_row_in_db[3] == 'imageButton':
-            responseForm = {
-                "type": response_text_row_in_db[3],
-                "text": response_text_row_in_db[4],
-                "imageUrl": response_text_row_in_db[5],
-                "buttons": json.loads(response_text_row_in_db[6])
-            }
-        elif response_text_row_in_db[3] == 'list':
-            # DB 연결
-            connection = pymysql.connect(
-                host='127.0.0.1',
-                user='hmc',
-                password='aleldjwps',
-                db='hmc_chatbot',
-            )
-
-            with connection.cursor() as cur:
-                query = response_text_row_in_db[5]
-                cur.execute(query)
-                items = []
-                for row in cur:
-                    item = {
-                        "title": row[0],
-                        "description": row[1],
-                        "imageUrl": row[4],
-                        "homepage": row[3],
-                    }
-                    items.append(item)
-
-            responseForm = {
-                "type": response_text_row_in_db[3],
-                "text": response_text_row_in_db[4],
-                "items": items,
-            }
-        else:
-            responseForm = {
-                "type": "simpleText",
-                "text": "죄송해요. 제가 잘 이해하지 못했어요."
-            }
+        responseForm = {
+            "type": response_text_row_in_db[3],
+            "text": response_text_row_in_db[4],
+            "object1": response_text_row_in_db[5],
+            "object2": response_text_row_in_db[6]
+        }
 
         return responseForm
 
