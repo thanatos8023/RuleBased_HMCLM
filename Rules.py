@@ -126,7 +126,9 @@ class Model(object):
         # response_text     :   4
         # response_object1  :   5
         # response_object2  :   6
-        print(response_text_row_in_db)
+
+        #print(response_text_row_in_db)
+
         if response_text_row_in_db[3] == 'simpleText':
             responseForm = {
                 "type": response_text_row_in_db[3],
