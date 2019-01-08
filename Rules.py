@@ -148,7 +148,7 @@ class Model(object):
             for morph_tag in splitted_morph:
                 result.append(morph_tag.split('/'))
 
-            return result
+            return set(result)
         except:
             pass
 
@@ -342,7 +342,6 @@ class Model(object):
             for necset in self.dm['Intentions'][key]['Rule']:
                 # There are set of morphs
                 # matched
-                print(type(necset))
                 matched = necset & set(self.pos)
                 if not matched:
                     break
