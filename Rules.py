@@ -89,10 +89,7 @@ class Model(object):
         # 사용자 발화에서 intention 을 찾는 코드
         # intention 찾기에 실패한 경우, False 가 저장됨
         # 현재 pin 이나 온도가 입력될 경우 False 가 저장되고 있음
-        if req_body['intention']:
-            self.intention = req_body['intention']
-        else:
-            self.intention = self.__get_intention__()
+        self.intention = self.__get_intention__()
 
         ## 응답 형식
 
