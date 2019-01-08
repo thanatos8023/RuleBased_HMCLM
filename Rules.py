@@ -325,14 +325,14 @@ class Model(object):
                 return intention
             # 코퍼스에 해당 발화가 없을 경우,
             # Rule 을 이용해서 intention 을 추측함.
-            # 추측도 불가능한 발화의 경우, None 을 반환
+            # 추측도 불가능한 발화의 경우, Fail 을 반환
             else:
                 intention = self.__get_intention_from_lm__()
 
                 if intention:
                     return intention
                 else:
-                    return None
+                    return "Fail"
 
     # Rule 과 비교하여 intention 을 찾는 함수
     def __get_intention_from_lm__(self):
@@ -355,7 +355,7 @@ class Model(object):
                 # This case, the utterance is in this intention
                 return key
 
-        return "NoIntention"
+        return "Fail"
 
     # 코퍼스에서 입력 발화를 검색하는 함수
     def __get_intention_from_corpus__(self):
