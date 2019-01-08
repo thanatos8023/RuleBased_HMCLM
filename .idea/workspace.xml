@@ -39,14 +39,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="734" />
-          <entry key="py" value="31512" />
+          <entry key="py" value="31523" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="32246" />
+          <entry key="Python" value="32257" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -131,12 +131,12 @@
         <entry file="file://$PROJECT_DIR$/Rules.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="482">
-              <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
+              <caret line="357" column="28" selection-start-line="357" selection-start-column="28" selection-end-line="357" selection-end-column="28" />
               <folding>
                 <element signature="e#51#63#0" expanded="true" />
-                <marker date="1546937356289" expanded="true" signature="2741:3236" ph="..." />
-                <marker date="1546937356289" expanded="false" signature="3902:3911" ph="..." />
-                <marker date="1546937356289" expanded="true" signature="3902:4317" ph="..." />
+                <marker date="1546937613173" expanded="true" signature="2741:3236" ph="..." />
+                <marker date="1546937613173" expanded="false" signature="3902:3911" ph="..." />
+                <marker date="1546937613173" expanded="true" signature="3902:4317" ph="..." />
               </folding>
             </state>
           </provider>
@@ -369,7 +369,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.32681867" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32681867" />
       <window_info anchor="bottom" id="SonarLint" order="11" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -564,12 +564,12 @@
     <entry file="file://$PROJECT_DIR$/Rules.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
-          <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
+          <caret line="357" column="28" selection-start-line="357" selection-start-column="28" selection-end-line="357" selection-end-column="28" />
           <folding>
             <element signature="e#51#63#0" expanded="true" />
-            <marker date="1546937356289" expanded="true" signature="2741:3236" ph="..." />
-            <marker date="1546937356289" expanded="false" signature="3902:3911" ph="..." />
-            <marker date="1546937356289" expanded="true" signature="3902:4317" ph="..." />
+            <marker date="1546937613173" expanded="true" signature="2741:3236" ph="..." />
+            <marker date="1546937613173" expanded="false" signature="3902:3911" ph="..." />
+            <marker date="1546937613173" expanded="true" signature="3902:4317" ph="..." />
           </folding>
         </state>
       </provider>

@@ -355,7 +355,7 @@ class Model(object):
                 # This case, the utterance is in this intention
                 return key
 
-        return ""
+        return "NoIntention"
 
     # 코퍼스에서 입력 발화를 검색하는 함수
     def __get_intention_from_corpus__(self):
