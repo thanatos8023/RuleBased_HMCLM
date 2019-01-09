@@ -132,20 +132,20 @@ class Model(object):
 
         return responseForm
 
-    def str2obj(self, string):
+    def str2obj(self, rulestr):
         # string: ooo/NNN,qqq/SSS
         # object: {('ooo', 'NNN'), ('qqq', 'SSS')}
-        print("str2obj ::::::::::::: Before :", string)
-        if not string is None:
-            splitted_morph = string.split(',')
+        print("str2obj ::::::::::::: Before :", rulestr)
+        if not rulestr is None:
+            splitted_morph = rulestr.split(',')
 
             result = []
             for morph_tag in splitted_morph:
-                result.append(morph_tag.split('/'))
-            print("str2obj ::::::::::::: After :", set(result))
-            return set(result)
+                result.append(tuple(morph_tag.split('/')))
+            print("str2obj ::::::::::::: After :", result)
+            return result
         else:
-            print("str2obj ::::::::::::: String is None :", string)
+            print("str2obj ::::::::::::: String is None :", rulestr)
             return None
 
     # DB 에서 DM 정보를 불러오는 함수
