@@ -215,7 +215,7 @@ class Model(object):
                 rule_sql = 'SELECT * FROM tb_rule WHERE intention=%s'
                 cursor.execute(rule_sql, (intention))
                 rule_result = cursor.fetchone()
-
+                print(intention, rule_result)
                 rule_temp = []
                 for i in range(3):
                     try:
