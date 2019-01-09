@@ -211,6 +211,7 @@ class Model(object):
                 cursor.execute(rule_sql, (intention))
                 rule_result = cursor.fetchone()
 
+                print(rule_result[2:5])
                 rule_temp = []
                 for i in range(2, 5):
                     if str(type(rule_result[i])) == "<class 'NoneType'>":
