@@ -215,7 +215,7 @@ class Model(object):
                 rule_sql = 'SELECT * FROM tb_rule WHERE intention=%s'
                 cursor.execute(rule_sql, (intention))
                 rule_result = cursor.fetchone()
-                print(intention, rule_result)
+
                 rule_temp = []
                 for i in range(3):
                     try:
@@ -234,6 +234,8 @@ class Model(object):
                     res_temp[status_row[2]] = self.get_responseForm(status_row)
 
                 # 응답 가져오기 끝: 변수명 res_temp
+
+                print(intention, rule_temp)
 
                 # 의도 채우기
                 intentions[intention] = {
