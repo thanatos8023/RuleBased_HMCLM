@@ -4,11 +4,8 @@
 import mecab
 import re
 import json
-import os
-import glob
-import pickle
-import random
 import pymysql
+import pdb
 
 class Model(object):
     def __init__(self, req):
@@ -339,6 +336,7 @@ class Model(object):
         # Searching in intentions
         for key in self.dm['Intentions'].keys():
             matched_case = 0
+            pdb.set_trace()
             for necset in self.dm['Intentions'][key]['Rule']:
                 # There are set of morphs
                 print("Intention:", key)
