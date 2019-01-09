@@ -212,12 +212,12 @@ class Model(object):
                 rule_result = cursor.fetchone()
 
                 rule_temp = []
-                for i in range(3):
-                    print(rule_result[2+i])
-                    if str(type(rule_result[2+i])) == "<class 'NoneType'>":
+                for i in range(2, 5):
+                    if str(type(rule_result[i])) == "<class 'NoneType'>":
                         break
 
-                    rule = self.str2obj(rule_result[2+i])
+                    print(rule_result[i])
+                    rule = self.str2obj(rule_result[i])
                     rule_temp.append(rule)
 
                 # 규칙 가져오기 끝: 변수명 rule_temp
