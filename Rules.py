@@ -213,15 +213,12 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
-                    rule = self.str2obj(rule_result[2+i])
-                    if not rule is None:
-                        if str(type(rule)) == "<class 'set'>":
-                            rule_temp.append(rule)
-                        elif str(type(rule)) == "<class 'list'>":
-                            rule_temp.append(set(rule))
-                        else:
-                            continue
+                    if str(type(rule_result[2+i])) == "<class 'NoneType'>":
+                        break
 
+                    rule = self.str2obj(rule_result[2+i])
+                    rule_temp.append(rule)
+                    
                 # 규칙 가져오기 끝: 변수명 rule_temp
 
                 # 응답 가져오기
