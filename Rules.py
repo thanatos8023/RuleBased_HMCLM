@@ -211,14 +211,12 @@ class Model(object):
                 cursor.execute(rule_sql, (intention))
                 rule_result = cursor.fetchone()
 
-                print(rule_result[2:5])
                 rule_temp = []
-                for i in range(2, 5):
-                    if str(type(rule_result[i])) == "<class 'NoneType'>":
-                        break
-
-                    print(rule_result[i])
-                    rule = self.str2obj(rule_result[i])
+                for col in rule_result:
+                    if col in ['Control_Car', 'FAQ', 'SmallTalk', intention]:
+                        continue
+                        
+                    rule = self.str2obj(col)
                     rule_temp.append(rule)
 
                 # 규칙 가져오기 끝: 변수명 rule_temp

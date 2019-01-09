@@ -1,0 +1,8 @@
+
+;python:S125"Remove this commented out code.(ã‡∆ì˘ˇˇˇˇ
+Gpython:S1313Ë".Make this IP "127.0.0.1" address configurable.(ﬁ’¥¢
+npython:S100r"WRename method "get_responseForm" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Ó‹„ø
+tpython:S100ö"URename method "get_DM_from_DB" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(˛’πÖ8‰ì ÜÉ-
+Fpython:S1313a".Make this IP "127.0.0.1" address configurable.(ﬁ’¥¢
+Gpython:S1313ù".Make this IP "127.0.0.1" address configurable.(ﬁ’¥¢
+tpython:S117~"]Rename this local variable "responseForm" to match the regular expression ^[_a-z][a-z0-9_]*$.(…ıÌ¨
