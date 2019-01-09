@@ -221,7 +221,7 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
-                    if not rule_result[2+i]:
+                    if rule_result[2+i] is None:
                         break
                     rule_temp.append(self.str2obj(rule_result[2 + i]))
 
