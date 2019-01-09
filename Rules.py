@@ -341,6 +341,8 @@ class Model(object):
             matched_case = 0
             for necset in self.dm['Intentions'][key]['Rule']:
                 # There are set of morphs
+                print("Intention:", key)
+                print("Morph set:", necset)
                 matched = necset & set(self.pos)
                 if not matched:
                     continue
