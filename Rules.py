@@ -135,10 +135,7 @@ class Model(object):
     def str2obj(self, string):
         # string: ooo/NNN,qqq/SSS
         # object: {('ooo', 'NNN'), ('qqq', 'SSS')}
-        if (type(string) is None) or (string == ''):
-            return ''
-
-        try:
+        if not string is None:
             splitted_morph = string.split(',')
 
             result = []
@@ -146,9 +143,8 @@ class Model(object):
                 result.append(morph_tag.split('/'))
 
             return set(result)
-        except:
-            pass
-
+        else:
+            return None
 
     # DB 에서 DM 정보를 불러오는 함수
     ### DB 에 필요한 필드
@@ -219,7 +215,9 @@ class Model(object):
                 rule_temp = []
                 for i in range(3):
                     try:
-                        rule_temp.append(self.str2obj(rule_result[2 + i]))
+                        rule = self.str2obj(rule_result[2+i])
+                        if not rule is None:
+                            rule_temp.append(rule)
                     except TypeError:
                         break
 
