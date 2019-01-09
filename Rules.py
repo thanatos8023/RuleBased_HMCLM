@@ -135,15 +135,17 @@ class Model(object):
     def str2obj(self, string):
         # string: ooo/NNN,qqq/SSS
         # object: {('ooo', 'NNN'), ('qqq', 'SSS')}
+        print("str2obj ::::::::::::: Before :", string)
         if not string is None:
             splitted_morph = string.split(',')
 
             result = []
             for morph_tag in splitted_morph:
                 result.append(morph_tag.split('/'))
-
+            print("str2obj ::::::::::::: After :", result)
             return set(result)
         else:
+            print("str2obj ::::::::::::: String is None :", string)
             return None
 
     # DB 에서 DM 정보를 불러오는 함수
