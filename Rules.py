@@ -213,12 +213,13 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
+                    print(rule_result[2+i])
                     if str(type(rule_result[2+i])) == "<class 'NoneType'>":
                         break
 
                     rule = self.str2obj(rule_result[2+i])
                     rule_temp.append(rule)
-                    
+
                 # 규칙 가져오기 끝: 변수명 rule_temp
 
                 # 응답 가져오기
