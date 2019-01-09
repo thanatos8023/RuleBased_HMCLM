@@ -221,9 +221,10 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
-                    if rule_result[2+i] is None:
+                    try:
+                        rule_temp.append(self.str2obj(rule_result[2 + i]))
+                    except TypeError:
                         break
-                    rule_temp.append(self.str2obj(rule_result[2 + i]))
 
                 # 규칙 가져오기 끝: 변수명 rule_temp
 
