@@ -135,17 +135,14 @@ class Model(object):
     def str2obj(self, rulestr):
         # string: ooo/NNN,qqq/SSS
         # object: {('ooo', 'NNN'), ('qqq', 'SSS')}
-        print("str2obj ::::::::::::: Before :", rulestr)
         if not rulestr is None:
             splitted_morph = rulestr.split(',')
 
             result = []
             for morph_tag in splitted_morph:
                 result.append(tuple(morph_tag.split('/')))
-            print("str2obj ::::::::::::: After :", result)
-            return result
+            return set(result)
         else:
-            print("str2obj ::::::::::::: String is None :", rulestr)
             return None
 
     # DB 에서 DM 정보를 불러오는 함수
@@ -216,12 +213,14 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
-                    try:
-                        rule = self.str2obj(rule_result[2+i])
-                        if not rule is None:
+                    rule = self.str2obj(rule_result[2+i])
+                    if not rule is None:
+                        if str(type(rule)) == "<class 'set'>":
                             rule_temp.append(rule)
-                    except TypeError:
-                        break
+                        elif str(type(rule)) == "<class 'list'>":
+                            rule_temp.append(set(rule))
+                        else:
+                            continue
 
                 # 규칙 가져오기 끝: 변수명 rule_temp
 
