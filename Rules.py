@@ -142,7 +142,7 @@ class Model(object):
             result = []
             for morph_tag in splitted_morph:
                 result.append(morph_tag.split('/'))
-            print("str2obj ::::::::::::: After :", result)
+            print("str2obj ::::::::::::: After :", set(result))
             return set(result)
         else:
             print("str2obj ::::::::::::: String is None :", string)
