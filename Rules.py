@@ -221,10 +221,9 @@ class Model(object):
 
                 rule_temp = []
                 for i in range(3):
-                    try:
-                        rule_temp.append(self.str2obj(rule_result[2 + i]))
-                    except:
-                        pass
+                    if not rule_result[2+i]:
+                        break
+                    rule_temp.append(self.str2obj(rule_result[2 + i]))
 
                 # 규칙 가져오기 끝: 변수명 rule_temp
 
@@ -341,13 +340,9 @@ class Model(object):
             matched_case = 0
             for necset in self.dm['Intentions'][key]['Rule']:
                 # There are set of morphs
-                # matched
-                if not necset:
-                    continue
-
                 matched = necset & set(self.pos)
                 if not matched:
-                    break
+                    continue
                 else:
                     matched_case += 1
 
