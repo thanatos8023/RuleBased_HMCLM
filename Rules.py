@@ -142,7 +142,7 @@ class Model(object):
                 result.append(tuple(morph_tag.split('/')))
             return set(result)
         else:
-            return None
+            return "NaN"
 
     # DB 에서 DM 정보를 불러오는 함수
     ### DB 에 필요한 필드
@@ -219,6 +219,8 @@ class Model(object):
                         continue
 
                     rule = self.str2obj(col)
+                    if rule == "NaN":
+                        continue
                     rule_temp.append(rule)
 
                 # 규칙 가져오기 끝: 변수명 rule_temp
