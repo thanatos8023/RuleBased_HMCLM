@@ -209,13 +209,15 @@ class Model(object):
                 # 규칙 가져오기
                 rule_sql = 'SELECT * FROM tb_rule WHERE intention=%s'
                 cursor.execute(rule_sql, (intention))
+
+                print("Result length:", len(cursor))
                 rule_result = cursor.fetchone()
 
                 rule_temp = []
                 for col in rule_result:
                     if col in ['Control_Car', 'FAQ', 'SmallTalk', intention]:
                         continue
-                        
+
                     rule = self.str2obj(col)
                     rule_temp.append(rule)
 
@@ -230,8 +232,6 @@ class Model(object):
                     res_temp[status_row[2]] = self.get_responseForm(status_row)
 
                 # 응답 가져오기 끝: 변수명 res_temp
-
-                print(intention, rule_temp)
 
                 # 의도 채우기
                 intentions[intention] = {
