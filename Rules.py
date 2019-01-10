@@ -208,9 +208,8 @@ class Model(object):
             for intention in intention_set:
                 # 규칙 가져오기
                 rule_sql = 'SELECT * FROM tb_rule WHERE intention=%s'
-                cursor.execute(rule_sql, (intention))
-
-                print("Result length:", len(cursor))
+                nrows = cursor.execute(rule_sql, (intention))
+                print("Number of rows :", nrows)
                 rule_result = cursor.fetchone()
 
                 rule_temp = []
