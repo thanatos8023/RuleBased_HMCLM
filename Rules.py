@@ -209,7 +209,9 @@ class Model(object):
                 # 규칙 가져오기
                 rule_sql = 'SELECT * FROM tb_rule WHERE intention=%s'
                 nrows = cursor.execute(rule_sql, (intention))
-                print("Number of rows :", nrows)
+                if nrows == 0:
+                    continue
+                    
                 rule_result = cursor.fetchone()
 
                 rule_temp = []
