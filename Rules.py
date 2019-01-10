@@ -5,7 +5,6 @@ import mecab
 import re
 import json
 import pymysql
-import pdb
 
 class Model(object):
     def __init__(self, req):
@@ -211,7 +210,7 @@ class Model(object):
                 nrows = cursor.execute(rule_sql, (intention))
                 if nrows == 0:
                     continue
-                    
+
                 rule_result = cursor.fetchone()
 
                 rule_temp = []
@@ -335,7 +334,6 @@ class Model(object):
         # Searching in intentions
         for key in self.dm['Intentions'].keys():
             matched_case = 0
-            pdb.set_trace()
             for necset in self.dm['Intentions'][key]['Rule']:
                 # There are set of morphs
                 print("Intention:", key)
