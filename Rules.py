@@ -95,7 +95,7 @@ class Model(object):
         connection = pymysql.connect(
             host='127.0.0.1',
             user='hmc',
-            password='aleldjwps',
+            password='mediazen',
             db='hmc_chatbot',
         )
 
@@ -155,7 +155,7 @@ class Model(object):
         connection = pymysql.connect(
             host='127.0.0.1',
             user='hmc',
-            password='aleldjwps',
+            password='mediazen',
             db='hmc_chatbot',
         )
 
@@ -358,7 +358,7 @@ class Model(object):
         connection = pymysql.connect(
             host='127.0.0.1',
             user='hmc',
-            password='aleldjwps',
+            password='mediazen',
             db='hmc_chatbot',
         )
 
