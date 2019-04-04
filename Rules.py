@@ -338,8 +338,8 @@ class Model(object):
             matched_case = 0
             for necset in self.dm['Intentions'][key]['Rule']:
                 # There are set of morphs
-                print("Intention:", key)
-                print("Morph set:", necset)
+                #print("Intention:", key)
+                #print("Morph set:", necset)
                 matched = necset & set(self.pos)
                 if not matched:
                     continue
@@ -367,7 +367,7 @@ class Model(object):
             cur.execute(sql)
 
             for row in cur:
-                if self.utt == row[2]:
+                if self.utt.strip() == row[2].strip():
                     return row[1]
 
         return None
